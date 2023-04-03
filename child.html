@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>iframe測試</title>
   <style>
     html,
     body {
@@ -36,7 +36,7 @@
     window.addEventListener('load', () => {
       const height = document.body.offsetHeight;
       parent.postMessage(height);
-      //parent.postMessage(height, 'http://127.0.0.1:5500'); // https://mother.tw 就是母頁的網域
+      //parent.postMessage(height, 'https://april808.github.io/'); // https://mother.tw 就是母頁的網域
     });
   </script>
 </body>

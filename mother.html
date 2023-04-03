@@ -43,10 +43,6 @@
     <button id="green" type="button">綠色</button>
   </div>
   <iframe id="iframe2" src="./child2.html"></iframe>
-
-  <div>
-    <iframe id="child" src="text.html"></iframe>
-  </div>
   <hr>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/s4BibernJxU" title="YouTube video player"
     frameborder="0"
@@ -57,7 +53,7 @@
     // 接到 message 要做什麼事的 function
     function receiveMessage(e) {
       // 來源網址（e.origin）不是指定的網域時
-      if (e.origin !== 'https://april808.github.io/') {
+      if (e.origin !== 'https://april808.github.io') {
         alert('資料來源錯誤');
         return false;
       }
@@ -79,14 +75,14 @@
     const iframe = document.getElementById('iframe2').contentWindow;
     // 按鈕click時傳訊息
     document.getElementById('blue').addEventListener('click', function () {
-      iframe.postMessage('lightskyblue', 'https://april808.github.io/');
+      iframe.postMessage('lightskyblue', 'https://april808.github.io');
     });
     document.getElementById('gold').addEventListener('click', () => {
-      iframe.postMessage('gold', 'https://april808.github.io/');
+      iframe.postMessage('gold', 'https://april808.github.io');
     });
 
     document.getElementById('green').addEventListener('click', () => {
-      iframe.postMessage('lightgreen', 'https://april808.github.io/');
+      iframe.postMessage('lightgreen', 'https://april808.github.io');
     });
 
   </script>
